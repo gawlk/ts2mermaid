@@ -1,0 +1,38 @@
+# ---
+# Build
+# ---
+
+dist
+dist-ssr
+
+# ---
+# Dependencies
+# ---
+
+node_modules
+
+# ---
+# Editors
+# ---
+
+.nova
+.vscode
+
+# ---
+# Local
+# ---
+
+*.local
+
+# ---
+# OS
+# ---
+
+.DS_Store
+* 2*
+
+# ---
+# Services
+# ---
+
+.vercel

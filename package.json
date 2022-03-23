@@ -1,0 +1,26 @@
+{
+  "name": "ts2mermaid",
+  "version": "0.2.2",
+  "description": "A codebase scanner that generates a Mermaid class diagram(s)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gawlk/ts2mermaid.git"
+  },
+  "author": "gawlk",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "$npm_execpath run build"
+  },
+  "peerDependencies": {
+    "@mermaid-js/mermaid-cli": "^8.14.0"
+  },
+  "dependencies": {
+    "typescript": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21"
+  }
+}
