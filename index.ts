@@ -15,6 +15,7 @@ interface Configuration {
   name?: string
   pathToScan?: string
   pathToSave?: string
+  emptySavePath?: true
   hideTypes?: true
   hideInterfaces?: true
   hideDependencies?: true
@@ -243,7 +244,9 @@ ${configuration?.hideExtends ? '' : convertExtendsToMermaid(types, type)}
 const convertDependenciesToMermaid = (types: Type[], type: Type) =>
   (
     type.dependencies
-      .map((dependency) => types.find((type) => type.name === dependency))
+      .map((dependency) =>
+        types.find((type) => type.name.split('~')[0] === dependency)
+      )
       .filter((type) => type) as Type[]
   )
     .map((dependencyType) => {
